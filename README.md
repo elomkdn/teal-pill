@@ -1,8 +1,7 @@
 # Teal Pill
 
-An island for KDE Plasma 6, in the spirit of the iPhone's Dynamic Island: a pill in the
-panel with what is playing, and what else is going on. It works with every player that
-speaks MPRIS: Spotify, Elisa, Haruna, mpv, Firefox, Chromium and Brave…
+An island for KDE Plasma 6: a pill in the panel with what is playing, and what else is going
+on. It works with every player that speaks MPRIS: Spotify, Elisa, Haruna, mpv, Firefox, Chromium and Brave…
 
 ![Teal Pill: the pill in the top bar and its card](preview/teal-pill.png)
 
@@ -17,7 +16,7 @@ speaks MPRIS: Spotify, Elisa, Haruna, mpv, Firefox, Chromium and Brave…
     battery's level;
   - connecting headphones widens it for a moment, with their battery;
   - so does the power profile changing: `game-performance` holds it during a game;
-  - colored dots, like the iPhone's: peach while an app records from a microphone, green while
+  - colored dots: peach while an app records from a microphone, green while
     one uses a camera, mauve while the screen is shared or recorded;
   - a yellow dot, and a warning at the start, when the system was started from a snapshot;
   - copies and downloads get a bubble of their own beside the pill, their progress
