@@ -35,14 +35,6 @@ theme. In English and French.
 
 Teal Pill needs only Plasma 6.
 
-- **The release file**, offline: download `teal-pill.plasmoid` from the
-  [releases](https://github.com/elomkdn/teal-pill/releases), then right-click a panel,
-  *Add Widgets…*, *Get New Widgets…*, *Install Widget From Local File…*, and pick it. Or:
-
-  ```sh
-  kpackagetool6 -t Plasma/Applet -i teal-pill.plasmoid
-  ```
-
 - **A clone of the repository**:
 
   ```sh
@@ -53,6 +45,14 @@ Teal Pill needs only Plasma 6.
 
   To update: `git pull`, `./install.sh`, then log out and back in. To remove:
   `./install.sh --uninstall`.
+
+- **The release file**, offline: download `teal-pill.plasmoid` from the
+  [releases](https://github.com/elomkdn/teal-pill/releases), then right-click a panel,
+  *Add Widgets…*, *Get New Widgets…*, *Install Widget From Local File…*, and pick it. Or:
+
+  ```sh
+  kpackagetool6 -t Plasma/Applet -i teal-pill.plasmoid
+  ```
 
 Then right-click a panel, *Add Widgets…*, **Teal Pill**.
 
