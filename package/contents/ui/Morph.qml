@@ -90,12 +90,7 @@ Item {
         height: morph.pill.height
         hoverEnabled: true
         acceptedButtons: Qt.AllButtons
-        onPressed: mouse => {
-            if (!root.pillButton(mouse.button)) {
-                morph.dismissed();
-            }
-        }
-        onWheel: wheel => root.pillWheel(wheel.angleDelta.y)
+        onPressed: morph.dismissed()
     }
 
     Kirigami.ShadowedRectangle {

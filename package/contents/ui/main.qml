@@ -85,20 +85,6 @@ PlasmoidItem {
         }
     }
 
-    // the pill's other buttons and its wheel, with the card open or not; false: not one of them
-    function pillButton(button) {
-        switch (button) {
-        case Qt.MiddleButton: player.playPause(); return true;
-        case Qt.BackButton: player.previous(); return true;
-        case Qt.ForwardButton: player.next(); return true;
-        default: return false;
-        }
-    }
-
-    function pillWheel(delta) {
-        player.changeVolume(delta / 120 * 0.05, true);
-    }
-
     Loader {
         id: surfaceLoader
         active: !root.planar && Qt.platform.pluginName.includes("wayland")
@@ -112,9 +98,10 @@ PlasmoidItem {
         ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.HiddenStatus
     Plasmoid.icon: "view-media-track"
 
-    toolTipMainText: hasMedia ? player.title : i18n("Nothing playing")
-    toolTipSubText: [hasMedia ? [player.artists, player.identity].filter(x => x).join(" · ") : ""]
-        .concat(activities.inUse.map(x => x.label)).filter(x => x).join("\n")
+    // on hover the pill already shows the title: the tooltip only says who is using what, and
+    // without any text Plasma shows none
+    toolTipMainText: activities.inUse[0]?.label ?? ""
+    toolTipSubText: activities.inUse.slice(1).map(x => x.label).join("\n")
     toolTipTextFormat: Text.PlainText
 
     switchWidth: Kirigami.Units.gridUnit * 14

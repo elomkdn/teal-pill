@@ -43,11 +43,14 @@ MouseArea {
     acceptedButtons: Qt.LeftButton | Qt.MiddleButton | Qt.BackButton | Qt.ForwardButton
 
     onClicked: mouse => {
-        if (!root.pillButton(mouse.button)) {
-            root.toggleCard();
+        switch (mouse.button) {
+        case Qt.MiddleButton: player.playPause(); break;
+        case Qt.BackButton: player.previous(); break;
+        case Qt.ForwardButton: player.next(); break;
+        default: root.toggleCard();
         }
     }
-    onWheel: wheel => root.pillWheel(wheel.angleDelta.y)
+    onWheel: wheel => player.changeVolume(wheel.angleDelta.y / 120 * 0.05, true)
 
     Row {
         id: row
