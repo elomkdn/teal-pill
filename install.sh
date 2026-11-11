@@ -4,7 +4,7 @@
 #
 # Usage:
 #   ./install.sh               install, or update in place
-#   ./install.sh --uninstall   remove it
+#   ./install.sh --uninstall   remove it, the same as ./uninstall.sh
 #
 # Then add it to a panel (right-click the panel, Add Widgets, Teal Pill). After an update,
 # log out and back in, or run: systemctl --user restart plasma-plasmashell
@@ -15,8 +15,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 ID="com.github.elomkdn.tealpill"
 
 if [[ "${1:-}" == "--uninstall" || "${1:-}" == "-u" ]]; then
-  kpackagetool6 -t Plasma/Applet -r "$ID"
-  exit 0
+  exec ./uninstall.sh
 fi
 
 # the French catalog, from po/fr.po

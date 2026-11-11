@@ -44,8 +44,7 @@ Teal Pill needs only Plasma 6.
   ./install.sh
   ```
 
-  To update: `git pull`, `./install.sh`, then log out and back in. To remove:
-  `./install.sh --uninstall`.
+  To update: `git pull`, `./install.sh`, then log out and back in.
 
 - **The release file**, offline: download `teal-pill.plasmoid` from the
   [releases](https://github.com/elomkdn/teal-pill/releases), then right-click a panel,
@@ -56,6 +55,9 @@ Teal Pill needs only Plasma 6.
   ```
 
 Then right-click a panel, *Add Widgets…*, **Teal Pill**.
+
+To remove it, however it was installed: `./uninstall.sh` from the clone, or in *Add Widgets…*,
+hover **Teal Pill** and click its trash icon.
 
 ## Settings
 
