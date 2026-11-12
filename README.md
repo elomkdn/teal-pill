@@ -20,9 +20,11 @@ on. It works with every player that speaks MPRIS: Spotify, Elisa, Haruna, mpv, F
   - colored signs: a peach microphone while an app records, a green camera while
     one films, a mauve screen while it is shared or recorded. These three are always on, and
     the tooltip and the card say which app it is;
-  - a yellow disk, and a warning at the start, when the system was started from a snapshot;
+  - a yellow clock, and a warning at the start, when the system was started from a snapshot;
   - copies and downloads get a bubble of their own beside the pill, their progress
     around it.
+
+  These signs are Teal Pill's own icons, solid and drawn alike, whatever the icon theme.
 - **The cover's color**: the dancing bars and the progress take the cover's color, as the [Catppuccin](https://catppuccin.com) Mocha color of the same
   hue. Every album has its color, always within the palette; gray covers keep teal.
 - **Synced lyrics**: from [lrclib.net](https://lrclib.net), a free and open database. Nothing
